@@ -1,12 +1,17 @@
-import './App.css';
+import React from 'react';
+import Dropdown from './components/Dropdown';
+
 
 function App() {
+  // These items array would be displayed in the dropdown list
+  const options = ["Yes", "No", "Probably Not", "Probably Yes"];
+
   return (
     <div className="App">
-      <header className="App-header">
-       
-       <h3>Hello, Debajyoti</h3>
-      </header>
+      {/* Question */}
+      <h2>Should you use a dropdown ?</h2>
+      {/* Dropdown Component: options array is send as props to Dropdown component */}
+      <Dropdown options={options} />
     </div>
   );
 }
